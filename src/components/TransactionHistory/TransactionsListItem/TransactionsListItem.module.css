@@ -1,0 +1,7 @@
+.line__item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+
+    border: 1px solid black;
+}

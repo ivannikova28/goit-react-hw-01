@@ -1,0 +1,7 @@
+.line{
+    
+}
+
+.line:nth-child(even) {
+    background-color: #d3d3d3;
+}

@@ -1,0 +1,22 @@
+.table__transactions {
+    border-collapse: collapse;
+    border: 1px solid black;
+
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+.thead {
+    background-color: #2a2a2a;
+    font-weight: 700;
+    color: #fff;
+}
+
+.th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+
+    border: 1px solid black; 
+}

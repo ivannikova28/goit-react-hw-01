@@ -4,34 +4,29 @@ import clsx from 'clsx';
 
 import styles from './Profile.module.css'
 
-export const Profile = ({ userData, ...rest}) => {
-    // console.log(userData);
-    // console.log(rest);
-    const {
-        username,
-        tag,
-        location,
-        avatar,
-        stats
-    } = userData
+export const Profile = ({
+  name: username,
+  tag,
+  location,
+  image: avatar,
+  stats }) => {
+  
   return (
-    <div >
-      <div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-        />
-        <p>{username}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={styles.profile__block}>
+      <div className={styles.profile}>
+        <img src={avatar} alt="User avatar" className={styles.profile__img} />
+        <p className={clsx(styles.text, styles.name)}>{username}</p>
+        <p className={clsx(styles.text, styles.tag)}>@{tag}</p>
+        <p className={clsx(styles.text, styles.location)}>{location}</p>
       </div>
 
-      <ul className={clsx(
-        // styles["stats-list"],
-        // styles.statsList,
-        styles.stats__list
-
-      )}>
+      <ul
+        className={clsx(
+          // styles["stats-list"],
+          // styles.statsList,
+          styles.stats__list
+        )}
+      >
         <li className={styles.stats__item}>
           <span>Followers</span>
           <span>{stats.followers}</span>
@@ -47,4 +42,4 @@ export const Profile = ({ userData, ...rest}) => {
       </ul>
     </div>
   );
-}
+};

@@ -1,0 +1,24 @@
+.friends__list {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    width: 80%;
+    margin-inline: auto;
+
+    padding: 0;
+}
+
+.friends__list_item {
+    width: calc((100% - 15px) / 3);
+    padding: 5px 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.friends__list_item.online {
+    border-color: green;
+}
+
+.friends__list_item.offline {
+    border-color: red;
+}
